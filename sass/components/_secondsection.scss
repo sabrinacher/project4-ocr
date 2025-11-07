@@ -1,0 +1,45 @@
+.secondsection {
+    padding: 30px 15px 70px 15px;
+    background-color: #F6F6F6;
+
+    .secondsection__display {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .secondsection__bloc {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .secondsection__img {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .secondsection__card {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .secondsection__bloc--h2 {
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-family;
+        @include font(700, 18px);
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin-top: 5px;
+        font-family: $font-family;
+        @include font(300, 17px);
+    }
+}

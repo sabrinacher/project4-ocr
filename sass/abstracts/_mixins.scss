@@ -1,0 +1,26 @@
+@mixin font($fontweight, $fontsize) {
+    font-weight: $fontweight;
+    font-size: $fontsize;
+}
+
+@mixin display($display: flex, $justify: center) {
+    display: $display;
+    justify-content: $justify;
+}
+
+@mixin button {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
