@@ -1,45 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>Page2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./sass/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Page5</title>
 </head>
 
 <body>
-    <header>
-        <nav> <i class="fa-solid fa-arrow-left"></i> <img src="image/logoohmyfood.png"></nav>
-        <img src="image/plat3.jpg" alt="Restaurant A la Francaise">
-    </header>
 
-    <section>
-        <h2>A la française <i class="fa-regular fa-heart"></i></h2>
-        <h3>ENTREES</h3>
-        <div><h2>Tartare de poulpe acidulé <i class="fa-regular fa-heart"></i></h2> <h3>Aux zestes d'orange</h3><p>25e</p></div>
-        <div><h2>Velouté de légumes d'antan <i class="fa-regular fa-heart"></i></h2> <h3>Carotte, panais, topinambour</h3><p>35e</p></div>
-        <div><h2>Soupe à l'oignon <i class="fa-regular fa-heart"></i></h2> <h3>Revisitée</h3><p>20e</p></div>
+  <header>
+    <nav class="menu__navbar">
+      <i class="fa-solid fa-arrow-left"></i>
+      <h1 class="menu__navbar__logo"> ohmyfood </h1>
+    </nav>
+    <img class="img__menu__navbar" src="./sass/image/plat3.jpg" alt="Restaurant A la Française">
+  </header>
 
-        <h3>PLATS</h3>
-        <div><h2>Coquille Saint-Jacques <i class="fa-regular fa-heart"></i></h2> <h3>Accompagné d'une purée de panais</h3><p>40e</p></div>
-        <div><h2>Magret de canard <i class="fa-regular fa-heart"></i></h2> <h3>Et parmentier de légumes de pommes de terre</h3><p>35e</p></div>
-        <div><h2>Pigeonneau d'Ile-et-Vilaine <i class="fa-regular fa-heart"></i></h2> <h3>Sur son lit de gnocchis aux légumes</h3><p>44e</p></div>
 
-        <h3>DESSERTS</h3>
-        <div><h2>Pétales de violette glacés <i class="fa-regular fa-heart"></i> </h2> <h3>Et purée de noisette</h3><p>18e</p></div>
-        <div><h2>Fondant au chocolat <i class="fa-regular fa-heart"></i></h2> <h3>Revisité</h3><p>22e</p></div>
-        <div><h2>Millefeuille croustillant <i class="fa-regular fa-heart"></i></h2> <h3>Myrtilles et pâte d'amande</h3><p>23e</p></div>
+  <section class="menu">
 
-        <button>Commander</button>
+    
+      <h2 class="menu__h2">A la Française <label class="heart-container">
+  <input type="checkbox" class="heart-checkbox" />
+  <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="heart"
+  >
+    <!-- Gradient SVG avec tes couleurs -->
+    <defs>
+      <linearGradient id="heartGradient" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#9356DC" />
+        <stop offset="100%" stop-color="#FF79DA" />
+      </linearGradient>
+    </defs>
 
-    </section>
+    <!-- Cœur vide par défaut -->
+    <path
+        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+           2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+           C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+           c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+        fill="none"
+        stroke="black"
+        stroke-width="1"
+    />
+  </svg>
+</label></h2>
+    
 
-      <footer>
-            <img src="image/ohmyfood.png">
-            <p><i class="fa-solid fa-utensils"> </i> Proposer un restaurant</p>
-            <p><i class="fa-solid fa-handshake"> </i> Devenir partenaire</p>
-            <p>Mention légales</p>
-            <p>Contact</p>
-        </footer>
+    <h3 class="menu__h3">ENTREES</h3>
+
+      <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Tartare de poulpe acidulé</p>
+    <p class="menu__card__subtitle">
+      Aux zeste d'orange
+      <span class="menu__card__subtitle--span">25€</span>
+    </p>
+  </span>
+</label>
+  
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Velouté de légumes d'antan</p>
+    <p class="menu__card__subtitle">
+      Carotte, panais, topinambour
+      <span class="menu__card__subtitle--span">35€</span>
+    </p>
+  </span>
+</label>
+    
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Soupe à l'oignon</p>
+    <p class="menu__card__subtitle">
+      Revisité
+      <span class="menu__card__subtitle--span">20€</span>
+    </p>
+  </span>
+</label>
+
+
+    <h3 class="menu__h3">PLATS</h3>
+
+      <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Coquille Saint-Jacques</p>
+    <p class="menu__card__subtitle">
+      Accompagné d'une purée de panais
+      <span class="menu__card__subtitle--span">40</span>
+    </p>
+  </span>
+</label>
+
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Magret de canard</p>
+    <p class="menu__card__subtitle">
+      Et parmentier de légumes de pomme de terre
+      <span class="menu__card__subtitle--span">35€</span>
+    </p>
+  </span>
+</label>
+    
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Pigeonneau d'Ile-et-Vilaine </p>
+    <p class="menu__card__subtitle">
+      Sur son lit de gnocchis aux légumes
+      <span class="menu__card__subtitle--span">44€</span> 
+    </p>
+  </span>
+</label>
+   
+
+    <h3 class="menu__h3">DESSERTS</h3>
+
+      <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Pétales de violettes glacées</p>
+    <p class="menu__card__subtitle">
+      Et purée de noisette
+      <span class="menu__card__subtitle--span">18€</span>
+    </p>
+  </span>
+</label>
+
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Fondant au chocolat</p>
+    <p class="menu__card__subtitle">
+      Revisité
+      <span class="menu__card__subtitle--span">22€</span>
+    </p>
+  </span>
+</label>
+    
+  <label class="menu__card">
+  <input type="checkbox" class="menu__card-checkbox" />
+  <span class="menu__card-content">
+    <p class="menu__card__title">Millefeuille croustillant</p>
+    <p class="menu__card__subtitle">
+      Myrtilles et pâte d'amande
+      <span class="menu__price">23€</span>
+    </p>
+  </span>
+</label>
+   
+
+    <div class="div__button"><button class="gradient__button">Commander</button></div>
+
+  </section>
+
+  <footer>
+    <p class="footer__logo">ohmyfood</p>
+    <p class="footer__listing"><i class="fa-solid fa-utensils"> </i>Proposer un restaurant</p>
+    <p class="footer__listing"><i class="fa-solid fa-handshake"> </i>Devenir partenaire</p>
+    <p>Mention légales</p>
+    <p>Contact</p>
+  </footer>
 </body>
+
 </html>

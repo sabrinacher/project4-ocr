@@ -36,6 +36,26 @@
         margin-top: 20px;
         margin-bottom: 0;
     }
+    .heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Cacher la checkbox */
+.heart-checkbox {
+  display: none;
+}
+
+/* Transition pour un effet fluide */
+.heart path {
+  transition: fill 0.3s;
+}
+
+/* Quand la checkbox est cochée, appliquer le gradient */
+.heart-checkbox:checked + .heart path {
+  fill: url(#heartGradient);
+  stroke:none;
+}
 
     h3 {
         margin-top: 5px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -7,6 +8,191 @@ body {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 25px;
+}
+
+.gradient__button {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  border-radius: 30px;
+  color: white;
+  padding: 15px 45px 15px 45px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin-top: 35px;
+  margin-bottom: 55px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.div__button {
+  display: flex;
+  justify-content: center;
+}
+
+.gradient__button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -50px;
+  border-radius: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu__div__h2 {
+  display: flex;
+  justify-content: space-around;
+}
+.menu__h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.menu .heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+.menu {
+  /* Cacher la checkbox */
+}
+.menu .heart-checkbox {
+  display: none;
+}
+.menu {
+  /* Transition pour un effet fluide */
+}
+.menu .heart path {
+  transition: fill 0.3s;
+}
+.menu {
+  /* Quand la checkbox est cochée, appliquer le gradient */
+}
+.menu .heart-checkbox:checked + .heart path {
+  fill: url(#heartGradient);
+  stroke: none;
+}
+.menu {
+  /**bouton de validation**/
+}
+.menu__h3 {
+  margin-top: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 0px;
+  border-bottom: 3px solid #95e8e8;
+  width: 11%;
+  margin-left: 15px;
+}
+.menu__card {
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+}
+.menu__card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: transform 0.45s ease;
+}
+.menu__price {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+.menu__card-checkbox {
+  display: none;
+}
+.menu__card-checkbox + .menu__card-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9AE3D1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+.menu__card-checkbox + .menu__card-content::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='white' stroke='%239AE3D1' stroke-width='2'/><path d='M7 12l3 3 7-7' stroke='%239AE3D1' stroke-width='2' fill='none'/></svg>");
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  transition-delay: 0s;
+}
+.menu__card-content > * {
+  position: relative;
+  z-index: 2;
+}
+.menu {
+  /* quand la checkbox est cochée */
+}
+.menu__card-checkbox:checked + .menu__card-content::after {
+  transform: scaleX(0.18);
+}
+.menu__card-checkbox:checked + .menu__card-content::before {
+  opacity: 1;
+  transition-delay: 0.15s;
+}
+.menu__card__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu .menu__card-price {
+  transform: translateX(0); /* ← AJOUT IMPORTANT */
+  transition: transform 0.45s ease;
+}
+.menu__card__subtitle {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.menu__card-checkbox:checked + .menu__card-content .menu__card-price,
+.menu__card-checkbox:checked + .menu__card-content .menu__card__subtitle--span {
+  transform: translateX(-70px);
+}
+
+.fa-heart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: x-large;
 }
 
 .firstsection__div {
@@ -28,6 +214,34 @@ body {
   gap: 15px;
   cursor: pointer;
   background-color: #F6F6F6;
+}
+
+.img__menu__navbar {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu__navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 25%;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.menu__navbar__logo {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: -10px;
+  margin-bottom: -6px;
+}
+
+.fa-solid fa-arrow-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navbar .navbar__location {
@@ -53,6 +267,8 @@ body {
   justify-content: center;
   margin: 50px 30px 0px 30px;
   text-align: center;
+  font-weight: 700;
+  font-size: 24px;
 }
 .navbar__logo {
   font-family: "Shrikhand", serif;
@@ -69,26 +285,6 @@ body {
   font-weight: 300;
   font-size: 18px;
   margin: 15px 15px 0px 15px;
-}
-.navbar .navbar__button {
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  border-radius: 20px;
-  color: white;
-  padding: 15px;
-  border: none;
-  font-family: "Roboto", sans-serif;
-  cursor: pointer;
-  margin-top: 35px;
-  margin-bottom: 55px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  font-weight: 500;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-}
-.navbar .navbar__div {
-  display: flex;
-  justify-content: center;
 }
 
 .secondsection {
@@ -125,6 +321,29 @@ body {
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 0;
+}
+.secondsection .heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+.secondsection {
+  /* Cacher la checkbox */
+}
+.secondsection .heart-checkbox {
+  display: none;
+}
+.secondsection {
+  /* Transition pour un effet fluide */
+}
+.secondsection .heart path {
+  transition: fill 0.3s;
+}
+.secondsection {
+  /* Quand la checkbox est cochée, appliquer le gradient */
+}
+.secondsection .heart-checkbox:checked + .heart path {
+  fill: url(#heartGradient);
+  stroke: none;
 }
 .secondsection h3 {
   margin-top: 5px;

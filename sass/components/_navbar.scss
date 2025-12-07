@@ -21,6 +21,7 @@
         @include display;
         margin: 50px 30px 0px 30px;
         text-align: center;
+        @include font(700, 24px);
     }
 
     &__logo {
@@ -38,11 +39,4 @@
         margin: 15px 15px 0px 15px;
     }
 
-    .navbar__button {
-        @include button;
-    }
-
-    .navbar__div {
-        @include display;
-    }
 }

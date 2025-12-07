@@ -1,0 +1,24 @@
+
+.menu__navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    margin:10px;
+    margin-top: 20px;
+}
+
+
+
+.menu__navbar__logo{
+        font-family: $logofont;
+        @include font (400, 30px);
+        margin-top: -10px;
+        margin-bottom: -6px;
+}
+
+.fa-solid fa-arrow-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}

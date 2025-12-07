@@ -9,18 +9,16 @@
 }
 
 @mixin button {
-    background: linear-gradient(to top, #9356DC, #FF79DA);
-    border-radius: 20px;
+    background: linear-gradient(to top, $primary, $secondary);
+    border-radius: 30px;
     color: white;
-    padding: 15px;
+    padding: 15px 45px 15px 45px;
     border: none;
-    font-family: "Roboto", sans-serif;
+    font-family: $font-family;
     cursor: pointer;
     margin-top: 35px;
     margin-bottom: 55px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    font-weight: 500;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
+    @include font (500, 16px);
+
 }

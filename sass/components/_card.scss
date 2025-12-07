@@ -1,0 +1,182 @@
+.menu{
+    background-color: #f6f6f6;
+    position: relative;
+    margin-top: -50px;
+    border-radius:20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+&__div__h2{
+    display: flex;
+    justify-content: space-around;
+}
+
+&__h2 {
+    font-family: $logofont;
+    @include font (400, 28px);
+    margin-bottom: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Cacher la checkbox */
+.heart-checkbox {
+  display: none;
+}
+
+/* Transition pour un effet fluide */
+.heart path {
+  transition: fill 0.3s;
+}
+
+/* Quand la checkbox est cochée, appliquer le gradient */
+.heart-checkbox:checked + .heart path {
+  fill: url(#heartGradient);
+  stroke:none;
+}
+
+
+
+/**bouton de validation**/
+
+&__h3 {
+    margin-top: 15px;
+    font-family: $font-family;
+    @include font (300, 16px);
+    margin-bottom: 0px;
+    border-bottom: 3px solid #95e8e8;
+    width: 11%;
+    margin-left: 15px;
+}
+
+
+&__card {
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+&__card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: transform 0.45s ease;
+}
+
+
+
+&__price {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+&__card-checkbox{
+    display: none;
+}
+
+&__card-checkbox + &__card-content::after{
+content: "";
+position: absolute;
+top:0;
+width: 100%;
+height: 100%;
+background-color: #9AE3D1;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.5s ease;
+z-index: 0;
+}
+
+&__card-checkbox + &__card-content::before {
+  content: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24'>\
+<circle cx='12' cy='12' r='10' fill='white' stroke='%239AE3D1' stroke-width='2'/>\
+<path d='M7 12l3 3 7-7' stroke='%239AE3D1' stroke-width='2' fill='none'/>\
+</svg>");
+
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  transition-delay: 0s;
+}
+
+&__card-content > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* quand la checkbox est cochée */
+&__card-checkbox:checked + &__card-content::after {
+  transform: scaleX(0.18);
+}
+
+&__card-checkbox:checked + &__card-content::before {
+  opacity: 1;
+  transition-delay: 0.15s;
+  
+}
+
+
+&__card__title{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 10px;
+    font-family: $font-family;
+    @include font(500,18px);
+    
+    
+}
+
+
+.menu__card-price {
+  transform: translateX(0); /* ← AJOUT IMPORTANT */
+  transition: transform 0.45s ease;
+}
+
+&__card__subtitle{
+    margin-top:5px;
+    margin-bottom:0;
+    padding-left:10px;
+    font-family: $font-family;
+    @include font(300,15px);
+    @include display;
+    justify-content: space-between;
+}
+
+}
+
+.menu__card-checkbox:checked + .menu__card-content .menu__card-price,
+.menu__card-checkbox:checked + .menu__card-content .menu__card__subtitle--span {
+  transform: translateX(-70px);
+}
+
+
+
+
+.fa-heart{
+    @include display;
+    flex-direction: column;
+    font-size: x-large;
+}
+
