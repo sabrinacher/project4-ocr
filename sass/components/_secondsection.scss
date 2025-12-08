@@ -2,6 +2,11 @@
     padding: 30px 15px 70px 15px;
     background-color: #F6F6F6;
 
+    .secondsection__title{
+      font-family: $font-family;
+      @include font(700, 24px);
+    }
+
     .secondsection__display {
         display: flex;
         flex-direction: column;
@@ -63,3 +68,4 @@
         @include font(300, 17px);
     }
 }
+

@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
 
+
     .firstsection_div_button {
         padding: 20px 0px;
         border-radius: 10px;
@@ -23,7 +24,7 @@
   border-radius: 50%; /* Rend l'élément parfaitement rond */
   
   /* 2. Couleurs et Police */
-  background-color: #8e44ad; /* Couleur de fond violette */
+  background-color: #9356DC; /* Couleur de fond violette */
   color: white; /* Couleur du chiffre "1" */
   font-family: Arial, sans-serif; /* Police de caractère */
   font-weight: bold; /* Gras pour que le chiffre soit bien visible */
@@ -48,5 +49,13 @@
     font-family: $font-family;
     @include font(500, 14px);
 }
+.fa-store{
+    color: #9356DC;
+}
 
+.firstsection__title{
+      font-family: $font-family;
+      @include font(700, 24px);
+      padding-left:15px;
+    }
 
