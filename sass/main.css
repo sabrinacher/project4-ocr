@@ -240,6 +240,18 @@ body {
   left: 29px;
 }
 
+.nouveau {
+  position: absolute;
+  right: 30px;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 7px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 .img__menu__navbar {
   height: 250px;
   width: 100%;

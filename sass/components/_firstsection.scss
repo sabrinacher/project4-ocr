@@ -37,3 +37,16 @@
   left: 29px;
 }
 }
+
+.nouveau{
+    position: absolute;
+    right: 30px;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: $font-family;
+    @include font(500, 14px);
+}
+
+
