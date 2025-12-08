@@ -16,4 +16,24 @@
         cursor: pointer;
         background-color: #F6F6F6;
     }
+    .circled-number {
+  /* 1. Dimensions du Cercle */
+  width: 23px; /* Largeur du cercle */
+  height: 23px; /* Hauteur du cercle (doit être la même que la largeur) */
+  border-radius: 50%; /* Rend l'élément parfaitement rond */
+  
+  /* 2. Couleurs et Police */
+  background-color: #8e44ad; /* Couleur de fond violette */
+  color: white; /* Couleur du chiffre "1" */
+  font-family: Arial, sans-serif; /* Police de caractère */
+  font-weight: bold; /* Gras pour que le chiffre soit bien visible */
+  font-size: 12px; /* Taille du chiffre "1" */ 
+  
+  /* 3. Centrage Parfait (le plus important) */
+  display: flex; /* Active le Flexbox */
+  justify-content: center; /* Centre horizontalement le contenu */
+  align-items: center; /* Centre verticalement le contenu */
+  position: absolute;
+  left: 29px;
+}
 }
