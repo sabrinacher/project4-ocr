@@ -21,7 +21,7 @@
 <body>
   <header>
     <nav class="menu__navbar">
-      <i class="fa-solid fa-arrow-left"></i>
+      <a href="./page1.html"><i class="fa-solid fa-arrow-left"></i></a> 
       <h1 class="menu__navbar__logo"> ohmyfood </h1>
     </nav>
     <img class="img__menu__navbar" src="./sass/image/plat4.jpg" alt="Restaurant La Palette du Goût">
@@ -31,7 +31,7 @@
 
   <section class="menu">
 
-    
+      
       <h2 class="menu__h2">La Palette du goût  <label class="heart-container">
   <input type="checkbox" class="heart-checkbox" />
   <svg
@@ -62,9 +62,10 @@
   </svg>
 </label>
 </h2>
+    
 
 
-
+<div class="menu-section">
     <h3 class="menu__h3">ENTREES</h3>
 
       <label class="menu__card">
@@ -77,14 +78,15 @@
     </p>
   </span>
 </label>
-    
+
+
       <label class="menu__card">
   <input type="checkbox" class="menu__card-checkbox" />
   <span class="menu__card-content">
     <p class="menu__card__title">Foie gras de canard mi-cuit</p>
     <p class="menu__card__subtitle">
       Et ses copeaux de truffe noire
-      <span class="menu__card__subtitle--span">35€</span>
+      <span class="menu__card-price">35€</span>
     </p>
   </span>
 </label>
@@ -95,12 +97,14 @@
     <p class="menu__card__title">Œuf au plat</p>
     <p class="menu__card__subtitle">
       Assaisonné à la truffe sur lit de caviar
-      <span class="menu__card__subtitle--span">20€</span>
+      <span class="menu__card-price">20€</span>
     </p>
   </span>
 </label>
+</div>
 
    
+<div class="menu-section">
     <h3 class="menu__h3">PLATS</h3>
 
       <label class="menu__card">
@@ -109,10 +113,12 @@
     <p class="menu__card__title">Filet de boeuf aux herbes</p>
     <p class="menu__card__subtitle">
       Accompagné de sa ribambelle de légumes
-      <span class="menu__card__subtitle--span">40€</span>
+      <span class="menu__card-price">40€</span>
     </p>
   </span>
 </label>
+
+
 
       <label class="menu__card">
   <input type="checkbox" class="menu__card-checkbox" />
@@ -120,7 +126,7 @@
     <p class="menu__card__title">Parmentier de queue de boeuf</p>
     <p class="menu__card__subtitle">
       A la truffe noire sur sa purée de panais
-      <span class="menu__card__subtitle--span">35€</span>
+      <span class="menu__card-price">35€</span>
     </p>
   </span>
 </label>
@@ -131,11 +137,14 @@
     <p class="menu__card__title">Filet de turbot</p>
     <p class="menu__card__subtitle">
       Aux agrumes
-      <span class="menu__card__subtitle--span">44€</span>
+      <span class="menu__card-price">44€</span>
     </p>
   </span>
 </label>
+</div>
 
+
+  <div class="menu-section">
     <h3 class="menu__h3">DESSERTS</h3>
 
       <label class="menu__card">
@@ -144,7 +153,7 @@
     <p class="menu__card__title">Paris-Brest</p>
     <p class="menu__card__subtitle">
       Revisité
-      <span class="menu__card__subtitle--span">18€</span>
+      <span class="menu__card-price">18€</span>
     </p>
   </span>
 </label>
@@ -155,7 +164,7 @@
     <p class="menu__card__title">Macaron au chocolat d'exception</p>
     <p class="menu__card__subtitle">
       Et glace à la vanille de Madagascar
-      <span class="menu__card__subtitle--span">22€</span>
+      <span class="menu__card-price">22€</span>
     </p>
   </span>
 </label>
@@ -166,10 +175,11 @@
     <p class="menu__card__title">Mousse au chocolat</p>
     <p class="menu__card__subtitle">
       Au piment d'Espelette et à la truffe noire
-      <span class="menu__card__subtitle--span">23€</span>
+      <span class="menu__card-price">23€</span>
     </p>
   </span>
 </label>
+  </div>
     
 
     <div class="div__button"><button class="gradient__button">Commander</button></div>
@@ -178,10 +188,10 @@
 
   <footer>
     <p class="footer__logo">ohmyfood</p>
-    <p class="footer__listing"><i class="fa-solid fa-utensils"> </i>Proposer un restaurant</p>
-    <p class="footer__listing"><i class="fa-solid fa-handshake"> </i>Devenir partenaire</p>
+    <p class="footer__listing"><i class="fa-solid fa-utensils"> </i> Proposer un restaurant</p>
+    <p class="footer__listing"><i class="fa-solid fa-handshake"> </i> Devenir partenaire</p>
     <p>Mention légales</p>
-    <p>Contact</p>
+    <a class="lien-contact" href="mailto:ohmyfood@restaurant.com">Contact</a>
   </footer>
 </body>
 

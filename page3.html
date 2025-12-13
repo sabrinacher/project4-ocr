@@ -21,7 +21,7 @@
 <body>
   <header>
     <nav class="menu__navbar">
-      <i class="fa-solid fa-arrow-left"></i>
+      <a href="./page1.html"><i class="fa-solid fa-arrow-left"></i></a> 
       <h1 class="menu__navbar__logo"> ohmyfood </h1>
     </nav>
     <img class="img__menu__navbar" src="./sass/image/plat1.jpg" alt="Restaurant Le Délice des Sens">
@@ -60,6 +60,8 @@
   </svg>
 </label></h2>
 
+
+    <div class="menu-section">
     <h3 class="menu__h3">ENTREES</h3>
 
       <label class="menu__card">
@@ -68,7 +70,7 @@
     <p class="menu__card__title">Tartare de thon</p>
     <p class="menu__card__subtitle">
       Assaisonné au Yuzu
-      <span class="menu__card__subtitle--span">25€</span>
+      <span class="menu__card-price">25€</span>
     </p>
   </span>
 </label>
@@ -79,7 +81,7 @@
     <p class="menu__card__title">Bouchée de homard croustillant</p>
     <p class="menu__card__subtitle">
       Et sa farandole de petit légumes
-      <span class="menu__card__subtitle--span">35€</span>
+      <span class="menu__card-price">35€</span>
     </p>
   </span>
 </label>
@@ -90,11 +92,15 @@
     <p class="menu__card__title">Poulet rôti aux herbes de Provence</p>
     <p class="menu__card__subtitle">
       Et sa crème à la truffe
-      <span class="menu__card__subtitle--span">40€</span>
+      <span class="menu__card-price">40€</span>
     </p>
   </span>
 </label>
+    </div>
 
+
+
+    <div class="menu-section">
     <h3 class="menu__h3">PLATS</h3>
 
       <label class="menu__card">
@@ -103,7 +109,7 @@
     <p class="menu__card__title">Poulet rôti aux herbes de Provence</p>
     <p class="menu__card__subtitle">
       Et sa crème de truffe
-      <span class="menu__card__subtitle--span">40€</span>
+      <span class="menu__card-price">40€</span>
     </p>
   </span>
 </label>
@@ -114,7 +120,7 @@
     <p class="menu__card__title">Langouste rôtie</p>
     <p class="menu__card__subtitle">
       Et ses légumes de saison
-      <span class="menu__card__subtitle--span">35€</span>
+      <span class="menu__card-price">35€</span>
     </p>
   </span>
 </label>
@@ -125,12 +131,15 @@
     <p class="menu__card__title">Côte de boeuf Angus</p>
     <p class="menu__card__subtitle">
       Et sa purée de panais
-      <span class="menu__card__subtitle--span">44€</span>
+      <span class="menu__card-price">44€</span>
     </p>
   </span>
 </label>
+    </div>
    
 
+
+  <div class="menu-section">
     <h3 class="menu__h3">DESSERTS</h3>
 
       <label class="menu__card">
@@ -139,7 +148,7 @@
     <p class="menu__card__title">Farandole de desserts</p>
     <p class="menu__card__subtitle">
       Du chef
-      <span class="menu__card__subtitle--span">18€</span>
+      <span class="menu__card-price">18€</span>
     </p>
   </span>
 </label>
@@ -150,7 +159,7 @@
     <p class="menu__card__title">Crème brûlée</p>
     <p class="menu__card__subtitle">
       Revisitée
-      <span class="menu__card__subtitle--span">22€</span>
+      <span class="menu__card-price">22€</span>
     </p>
   </span>
 </label>
@@ -161,10 +170,11 @@
     <p class="menu__card__title">Tiramisu</p>
     <p class="menu__card__subtitle">
       A la noisette
-      <span class="menu__card__subtitle--span">23€</span>
+      <span class="menu__card-price">23€</span>
     </p>
   </span>
 </label>
+  </div>
    
 
     <div class="div__button"><button class="gradient__button">Commander</button></div>
@@ -173,10 +183,10 @@
 
   <footer>
     <p class="footer__logo">ohmyfood</p>
-    <p class="footer__listing"><i class="fa-solid fa-utensils"> </i>Proposer un restaurant</p>
-    <p class="footer__listing"><i class="fa-solid fa-handshake"> </i>Devenir partenaire</p>
+    <p class="footer__listing"><i class="fa-solid fa-utensils"> </i> Proposer un restaurant</p>
+    <p class="footer__listing"><i class="fa-solid fa-handshake"> </i> Devenir partenaire</p>
     <p>Mention légales</p>
-    <p>Contact</p>
+    <a class="lien-contact" href="mailto:ohmyfood@restaurant.com">Contact</a>
   </footer>
 </body>
 

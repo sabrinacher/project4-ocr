@@ -1,12 +1,15 @@
 footer {
     background-color: #353535;
     padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     .footer__logo {
         font-family: $logofont;
         color: white;
         @include font(400, 18px);
         margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .footer__listing {
@@ -20,7 +23,16 @@ footer {
         font-family: $font-family;
         color: white;
         @include font(400, 16px);
-        margin-bottom: 0;
-        cursor: pointer;
+        margin-bottom: 5px;
+        margin-top: 7px;
+        
     }
+}
+
+.lien-contact{
+    text-decoration: none;
+    color: white;
+    font-family: $font-family;
+    @include font(400, 17px);
+    
 }
