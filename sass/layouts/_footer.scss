@@ -36,3 +36,40 @@ footer {
     @include font(400, 17px);
     
 }
+
+@media screen and (min-width: 1024px){
+
+footer{
+    background-color: #353535;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    padding-left:55%;
+    gap: 10px;
+    align-items: self-end;
+}
+
+.footer__logo{
+font-family: "Shrikhand", serif;
+color: white;
+font-weight: 400;
+font-size: 18px;
+margin-top: 0;
+padding-right: 20px;
+}
+
+.lien-contact{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-right: 40px;
+
+}
+
+}

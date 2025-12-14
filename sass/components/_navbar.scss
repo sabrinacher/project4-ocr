@@ -40,7 +40,26 @@
     }
 
 }
+@media screen and (min-width: 1024px){
+    .menu__navbar{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .navbar__logo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-top: 20px;
+    }
+
+    .menu__navbar__logo{
+        margin-left: 15%;
+    }
+    }
+
 
 .fa-arrow-left{
     color:black;
 }
+

@@ -1,3 +1,4 @@
+
 @keyframes slide-in {
     0% {
         opacity: 0;
@@ -183,6 +184,30 @@ z-index: 0;
     justify-content: space-between;
 }
 
+&__card__description {
+    // Styles pour que l'ellipsis fonctionne
+    display: block; // Essentiel pour définir une largeur
+    white-space: nowrap; // Empêche le retour à la ligne
+    overflow: hidden; // Cache le débordement
+    text-overflow: ellipsis; // Affiche les points de suspension
+    
+    // Par défaut, prend toute la place disponible (par exemple 90% pour laisser la place au prix)
+    max-width: 90%; 
+    
+    // Assurez-vous qu'il grandisse dans le flexbox de __card__subtitle
+    flex-grow: 1; 
+    
+    // Animation pour que la réduction de largeur soit fluide
+    transition: max-width 0.45s ease;
+}
+
+}
+
+.menu__card-checkbox:checked + .menu__card-content .menu__card__description {
+    // Adaptez cette valeur !
+    // Par exemple, si vous perdez 70px pour l'animation, donnez une marge de sécurité.
+    // 70% est souvent un bon point de départ pour l'adapter aux différentes longueurs de texte.
+    max-width: 70%; 
 }
 
 .menu__card-checkbox:checked + .menu__card-content .menu__card-price,
@@ -237,3 +262,76 @@ z-index: 0;
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(2) { animation-delay: 1.7s; }
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(3) { animation-delay: 1.8s; }
 
+
+@media screen and (min-width: 1024px){
+
+  .menu{
+    background-color: #f6f6f6;
+    position: relative;
+    margin-top: -50px;
+    border-radius: 20px;
+    padding-top:10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+
+  .menu__h3 {
+    margin-top: 15px;
+    font-family: $font-family;
+    @include font (300, 16px);
+    margin-bottom: 0px;
+    border-bottom: 3px solid #95e8e8;
+    width: 40px;
+    margin-left: 15px;
+    margin-bottom:20px;
+}
+
+
+  .menu__h2{
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .menu-section{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 280px;
+  }
+
+.menu__card-checkbox:checked + .menu__card-content::after{
+  transform: scaleX(0.12);
+}
+
+.menu__card-checkbox:checked + .menu__card-content::before{
+  content: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24'>\
+<circle cx='12' cy='12' r='10' fill='white' stroke='%239AE3D1' stroke-width='2'/>\
+<path d='M7 12l3 3 7-7' stroke='%239AE3D1' stroke-width='2' fill='none'/>\
+</svg>");
+  position: absolute;
+  top:50%;
+  right: 4%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.menu__card-price{
+  transform: translate(0);
+  transition: transform 0.45s ease;
+  font-weight: 700;
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+}
