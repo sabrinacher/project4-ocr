@@ -52,10 +52,9 @@ footer{
 }
 
 .footer__logo{
-font-family: "Shrikhand", serif;
+font-family: $logofont;
 color: white;
-font-weight: 400;
-font-size: 18px;
+@include font (400,18px);
 margin-top: 0;
 padding-right: 20px;
 }
@@ -63,9 +62,8 @@ padding-right: 20px;
 .lien-contact{
     text-decoration: none;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
+    font-family: $font-family;
+    @include font (400,17px);
     position: relative;
     padding-bottom: 10px;
     margin-right: 40px;

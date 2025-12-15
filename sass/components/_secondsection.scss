@@ -133,7 +133,6 @@
     }
 }
 
-/* 1. Styles de base (identiques) */
 .heart-checkbox {
     display: none;
 }
@@ -144,37 +143,32 @@
     position: relative;
 }
 
-/* 2. Styles du chemin de base (l'état "vide" et son contour noir) */
+
 .heart-base {
-    /* Contour initial : noir */
+    
     stroke: black; 
     stroke-width: 1.5;
     fill: transparent; 
-    /* Ajout de la transition pour la couleur du contour */
+    
     transition: stroke 0.3s ease-in-out; 
 }
 
-/* 3. Styles du chemin de remplissage (l'état "plein") */
 .heart-overlay {
     transition: clip-path 1s cubic-bezier(0.4, 0, 0.2, 1); 
-    /* Masqué au départ */
     clip-path: inset(100% 0 0 0);
 }
 
-/* 4. L'animation au clic (déclencheur) */
 
-/* Lorsque la checkbox est cochée : Remplissage progressif du bas vers le haut */
 .heart-checkbox:checked ~ .heart .heart-overlay {
     clip-path: inset(0% 0 0 0); 
 }
 
-/* Lorsque la checkbox est cochée : DISPARITION DU CONTOUR NOIR */
+
 .heart-checkbox:checked ~ .heart .heart-base {
-    /* Rend le contour invisible. Utiliser 'transparent' pour ne pas le voir. */
     stroke: transparent; 
 }
 
-/* Optionnel : Ajout d'une petite animation de pulsation */
+
 .heart-checkbox:checked ~ .heart {
     transform: scale(1.08);
     transition: transform 0.3s ease-in-out;

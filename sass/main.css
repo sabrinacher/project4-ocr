@@ -72,20 +72,11 @@ body {
   display: inline-block;
   cursor: pointer;
 }
-.menu {
-  /* Cacher la checkbox */
-}
 .menu .heart-checkbox {
   display: none;
 }
-.menu {
-  /* Transition pour un effet fluide */
-}
 .menu .heart path {
   transition: fill 0.3s;
-}
-.menu {
-  /* Quand la checkbox est cochée, appliquer le gradient */
 }
 .menu .heart-checkbox:checked + .heart path {
   fill: url(#heartGradient);
@@ -223,7 +214,6 @@ body {
   font-size: x-large;
 }
 
-/* 1. SECTION ENTRÉE (La première .menu-section) */
 .menu-section:nth-of-type(1) .menu__card:nth-child(2) {
   animation-delay: 0.1s;
 }
@@ -236,9 +226,6 @@ body {
   animation-delay: 0.3s;
 }
 
-/* Note: nth-child commence à 1, mais le h3 est le 1er enfant, donc la carte est le 2nd */
-/* 2. SECTION PLAT (La deuxième .menu-section) */
-/* Démarre à 0.8s */
 .menu-section:nth-of-type(2) .menu__card:nth-child(2) {
   animation-delay: 0.8s;
 }
@@ -251,8 +238,6 @@ body {
   animation-delay: 1s;
 }
 
-/* 3. SECTION DESSERT (La troisième .menu-section) */
-/* Démarre à 1.5s */
 .menu-section:nth-of-type(3) .menu__card:nth-child(2) {
   animation-delay: 1.5s;
 }
@@ -265,7 +250,6 @@ body {
   animation-delay: 1.7s;
 }
 
-/* 1. SECTION ENTRÉE (La première .menu-section) */
 .menu-section-page4:nth-of-type(1) .menu__card:nth-of-type(1) {
   animation-delay: 0.1s;
 }
@@ -282,7 +266,6 @@ body {
   animation-delay: 0.4s;
 }
 
-/* 2. SECTION PLAT (La deuxième .menu-section) */
 .menu-section-page4:nth-of-type(2) .menu__card:nth-of-type(1) {
   animation-delay: 0.7s;
 }
@@ -295,7 +278,6 @@ body {
   animation-delay: 0.9s;
 }
 
-/* 3. SECTION DESSERT (La troisième .menu-section) */
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(1) {
   animation-delay: 1.6s;
 }
@@ -398,20 +380,17 @@ body {
 }
 
 .circled-number {
-  /* 1. Dimensions du Cercle */
-  width: 23px; /* Largeur du cercle */
-  height: 23px; /* Hauteur du cercle (doit être la même que la largeur) */
-  border-radius: 50%; /* Rend l'élément parfaitement rond */
-  /* 2. Couleurs et Police */
-  background-color: #9356DC; /* Couleur de fond violette */
-  color: white; /* Couleur du chiffre "1" */
-  font-family: Arial, sans-serif; /* Police de caractère */
-  font-weight: bold; /* Gras pour que le chiffre soit bien visible */
-  font-size: 12px; /* Taille du chiffre "1" */
-  /* 3. Centrage Parfait (le plus important) */
-  display: flex; /* Active le Flexbox */
-  justify-content: center; /* Centre horizontalement le contenu */
-  align-items: center; /* Centre verticalement le contenu */
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 29px;
 }
@@ -439,19 +418,17 @@ body {
   }
   .circled-number {
     position: RELATIVE;
-    width: 23px; /* Largeur du cercle */
-    height: 23px; /* Hauteur du cercle (doit être la même que la largeur) */
-    border-radius: 50%; /* Rend l'élément parfaitement rond */
-    /* 2. Couleurs et Police */
-    background-color: #9356DC; /* Couleur de fond violette */
-    color: white; /* Couleur du chiffre "1" */
-    font-family: Arial, sans-serif; /* Police de caractère */
-    font-weight: bold; /* Gras pour que le chiffre soit bien visible */
-    font-size: 12px; /* Taille du chiffre "1" */
-    /* 3. Centrage Parfait (le plus important) */
-    display: flex; /* Active le Flexbox */
-    justify-content: center; /* Centre horizontalement le contenu */
-    align-items: center; /* Centre verticalement le contenu */
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #9356DC;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: -15%;
   }
 }
@@ -506,8 +483,8 @@ body {
 
 .fa-solid fa-arrow-left {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
 }
 
 .navbar .navbar__location {
@@ -698,9 +675,6 @@ body {
     padding-left: 65px;
   }
 }
-.secondsection {
-  /* 1. Styles de base (identiques) */
-}
 .secondsection .heart-checkbox {
   display: none;
 }
@@ -709,41 +683,21 @@ body {
   cursor: pointer;
   position: relative;
 }
-.secondsection {
-  /* 2. Styles du chemin de base (l'état "vide" et son contour noir) */
-}
 .secondsection .heart-base {
-  /* Contour initial : noir */
   stroke: black;
   stroke-width: 1.5;
   fill: transparent;
-  /* Ajout de la transition pour la couleur du contour */
   transition: stroke 0.3s ease-in-out;
-}
-.secondsection {
-  /* 3. Styles du chemin de remplissage (l'état "plein") */
 }
 .secondsection .heart-overlay {
   transition: clip-path 1s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Masqué au départ */
   clip-path: inset(100% 0 0 0);
-}
-.secondsection {
-  /* 4. L'animation au clic (déclencheur) */
-  /* Lorsque la checkbox est cochée : Remplissage progressif du bas vers le haut */
 }
 .secondsection .heart-checkbox:checked ~ .heart .heart-overlay {
   clip-path: inset(0% 0 0 0);
 }
-.secondsection {
-  /* Lorsque la checkbox est cochée : DISPARITION DU CONTOUR NOIR */
-}
 .secondsection .heart-checkbox:checked ~ .heart .heart-base {
-  /* Rend le contour invisible. Utiliser 'transparent' pour ne pas le voir. */
   stroke: transparent;
-}
-.secondsection {
-  /* Optionnel : Ajout d'une petite animation de pulsation */
 }
 .secondsection .heart-checkbox:checked ~ .heart {
   transform: scale(1.08);

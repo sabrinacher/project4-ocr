@@ -42,17 +42,15 @@
   cursor: pointer;
 }
 
-/* Cacher la checkbox */
 .heart-checkbox {
   display: none;
 }
 
-/* Transition pour un effet fluide */
+
 .heart path {
   transition: fill 0.3s;
 }
 
-/* Quand la checkbox est cochée, appliquer le gradient */
 .heart-checkbox:checked + .heart path {
   fill: url(#heartGradient);
   stroke:none;
@@ -185,28 +183,19 @@ z-index: 0;
 }
 
 &__card__description {
-    // Styles pour que l'ellipsis fonctionne
-    display: block; // Essentiel pour définir une largeur
-    white-space: nowrap; // Empêche le retour à la ligne
-    overflow: hidden; // Cache le débordement
-    text-overflow: ellipsis; // Affiche les points de suspension
     
-    // Par défaut, prend toute la place disponible (par exemple 90% pour laisser la place au prix)
+    display: block;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     max-width: 90%; 
-    
-    // Assurez-vous qu'il grandisse dans le flexbox de __card__subtitle
     flex-grow: 1; 
-    
-    // Animation pour que la réduction de largeur soit fluide
     transition: max-width 0.45s ease;
 }
 
 }
 
 .menu__card-checkbox:checked + .menu__card-content .menu__card__description {
-    // Adaptez cette valeur !
-    // Par exemple, si vous perdez 70px pour l'animation, donnez une marge de sécurité.
-    // 70% est souvent un bon point de départ pour l'adapter aux différentes longueurs de texte.
     max-width: 70%; 
 }
 
@@ -226,38 +215,32 @@ z-index: 0;
 
 
 
-/* 1. SECTION ENTRÉE (La première .menu-section) */
+
 .menu-section:nth-of-type(1) .menu__card:nth-child(2) { animation-delay: 0.1s; } 
 .menu-section:nth-of-type(1) .menu__card:nth-child(3) { animation-delay: 0.2s; }
 .menu-section:nth-of-type(1) .menu__card:nth-child(4) { animation-delay: 0.3s; }
-/* Note: nth-child commence à 1, mais le h3 est le 1er enfant, donc la carte est le 2nd */
 
-/* 2. SECTION PLAT (La deuxième .menu-section) */
-/* Démarre à 0.8s */
 .menu-section:nth-of-type(2) .menu__card:nth-child(2) { animation-delay: 0.8s; }
 .menu-section:nth-of-type(2) .menu__card:nth-child(3) { animation-delay: 0.9s; }
 .menu-section:nth-of-type(2) .menu__card:nth-child(4) { animation-delay: 1.0s; }
 
-/* 3. SECTION DESSERT (La troisième .menu-section) */
-/* Démarre à 1.5s */
 .menu-section:nth-of-type(3) .menu__card:nth-child(2) { animation-delay: 1.5s; }
 .menu-section:nth-of-type(3) .menu__card:nth-child(3) { animation-delay: 1.6s; }
 .menu-section:nth-of-type(3) .menu__card:nth-child(4) { animation-delay: 1.7s; }
 
 
 
-/* 1. SECTION ENTRÉE (La première .menu-section) */
 .menu-section-page4:nth-of-type(1) .menu__card:nth-of-type(1) { animation-delay: 0.1s; } 
 .menu-section-page4:nth-of-type(1) .menu__card:nth-of-type(2) { animation-delay: 0.2s; }
 .menu-section-page4:nth-of-type(1) .menu__card:nth-of-type(3) { animation-delay: 0.3s; }
 .menu-section-page4:nth-of-type(1) .menu__card:nth-of-type(4) { animation-delay: 0.4s; }
 
-/* 2. SECTION PLAT (La deuxième .menu-section) */
+
 .menu-section-page4:nth-of-type(2) .menu__card:nth-of-type(1) { animation-delay: 0.7s; }
 .menu-section-page4:nth-of-type(2) .menu__card:nth-of-type(2) { animation-delay: 0.8s; }
 .menu-section-page4:nth-of-type(2) .menu__card:nth-of-type(3) { animation-delay: 0.9s; }
 
-/* 3. SECTION DESSERT (La troisième .menu-section) */
+
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(1) { animation-delay: 1.6s; }
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(2) { animation-delay: 1.7s; }
 .menu-section-page4:nth-of-type(3) .menu__card:nth-of-type(3) { animation-delay: 1.8s; }
@@ -291,13 +274,11 @@ z-index: 0;
 
 
   .menu__h2{
-    font-family: "Shrikhand", serif;
-    font-weight: 400;
-    font-size: 28px;
+    font-family: $logofont;
+    @include font(400, 28px);
     margin-bottom: 40px;
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
+    @include display;
     gap: 50px;
   }
 
@@ -329,8 +310,7 @@ z-index: 0;
 .menu__card-price{
   transform: translate(0);
   transition: transform 0.45s ease;
-  font-weight: 700;
-  font-size: 15px;
+  @include font (700, 15px);
   padding-right: 10px;
 }
 

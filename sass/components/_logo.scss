@@ -17,8 +17,8 @@
 }
 
 .fa-solid fa-arrow-left{
-    display: flex;
+    @include display;
     flex-direction: column;
-    justify-content: center;
+    
 
 }
